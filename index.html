@@ -5,32 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Card</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Stall Name</h1>
-            <h2>Menu</h2>
+            <h1>Fast Food Like Home</h1>
+            <h2>Delicious Menu</h2>
         </header>
-        <div class="menu-item" onclick="showAlert('Momo', 20)">
-            <h3>Momo</h3>
-            <p>Steamed dumplings filled with vegetables or meat.</p>
-            <span class="price">₹20</span>
+        
+        <div class="menu">
+            <div class="menu-item" onclick="showItem('Momo', 'momo.jpg')">
+                <h3>Momo</h3>
+                <p>Steamed dumplings filled with vegetables or meat.</p>
+                <span class="price">₹5</span>
+            </div>
+            <div class="menu-item" onclick="showItem('Poha', 'poha.jpg')">
+                <h3>Poha</h3>
+                <p>Flattened rice cooked with spices, peanuts, and vegetables.</p>
+                <span class="price">₹3</span>
+            </div>
+            <div class="menu-item" onclick="showItem('Biryani', 'biryani.jpg')">
+                <h3>Biryani</h3>
+                <p>Aromatic rice dish cooked with spices and your choice of chicken or vegetables.</p>
+                <span class="price">₹8</span>
+            </div>
         </div>
-        <div class="menu-item" onclick="showAlert('Poha', 15)">
-            <h3>Poha</h3>
-            <p>Flattened rice cooked with spices, peanuts, and vegetables.</p>
-            <span class="price">₹15</span>
-        </div>
-        <div class="menu-item" onclick="showAlert('Biryani', 140)">
-            <h3>Biryani</h3>
-            <p>Aromatic rice dish cooked with spices and your choice of chicken or vegetables.</p>
-            <span class="price">₹140</span>
-        </div>
+
         <footer>
-            <p>Thank you for visiting!</p>
+            <p>Thank you for visiting! Enjoy your meal.</p>
         </footer>
     </div>
-    <script src="script.js"></script>
+
+    <!-- Image Popup Modal -->
+    <div id="popup" class="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <img id="popup-img" src="" alt="Food Image">
+        <h3 id="popup-title"></h3>
+    </div>
 </body>
 </html>
